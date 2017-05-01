@@ -7,8 +7,9 @@
 
 
 #include "sam.h"
-#include "sam_utils.h"
+#include "utilities.h""
 
+#define PA15	PORTA, 15
 
 int main(void)
 {
@@ -18,8 +19,9 @@ int main(void)
     /* Replace with your application code */
 	//PORT->Group[0].DIR.reg = (1 << 15);
 	//PORT->Group[0].OUT.reg &= ~(1 << 15);	//Drive PA00 high
-	MAKE_OUTPUT(PORTA, 15);
-	CLEAR_PIN(PORTA, 15);
+	//MAKE_OUTPUT(PORTA, 15);
+	configPin(PA15, OUTPUT);
+	//CLEAR_PIN(PORTA, 15);
 	
 	//MAKE_OUTPUT(PA15);
 	//CLEAR_PIN(PA15);

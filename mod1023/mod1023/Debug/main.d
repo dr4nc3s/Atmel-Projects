@@ -88,7 +88,7 @@ main.d main.o: .././main.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\include/instance/tsens.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\include/pio/samc21j18a.h \
- .././utilities.h
+ .././utilities.h .././timing.h
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\include/sam.h:
 
@@ -269,3 +269,5 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\i
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMC21_DFP\1.1.93\samc21\include/pio/samc21j18a.h:
 
 .././utilities.h:
+
+.././timing.h:
