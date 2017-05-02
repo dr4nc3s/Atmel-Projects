@@ -1,10 +1,10 @@
-#Atmel-Projects#
+# Atmel-Projects #
 
 Any adventures I take (outside of work) with Atmel MCUs will go here. 
 
 Should also include adventures with using Atmel Studio 7.0. This one's been a bit of learning for me as well.
 
-##SAMC21J##
+## SAMC21J ##
 
 Playing around with this and writing helper libraries to interface with the peripherals in this MCU. Goal will be to write applications without using Atmel Software Framework (ASF) and write my own utility functions. 
 
@@ -16,7 +16,7 @@ Playing around with this and writing helper libraries to interface with the peri
 3. SPI driver - interface with Nokia 5110 LCD (<a href="http://www.embeddedadventures.com/84x48_Nokia_5110_LCD_display_LCD-8448GR.html">LCD8448-GR</a>)
 
 
-###Coming Soon###
+### Coming Soon ###
 ---
 1. ATmega328P (without the Arduino support)
 2. SAML21J (pending my own breakout board and decent working utilities from SAMC21)
