@@ -1,6 +1,8 @@
 #Atmel-Projects#
 
-Any adventures I take (outside of work) in Atmel MCUs will go here. 
+Any adventures I take (outside of work) with Atmel MCUs will go here. 
+
+Should also include adventures with using Atmel Studio 7.0. This one's been a bit of learning for me as well.
 
 ##SAMC21J##
 
