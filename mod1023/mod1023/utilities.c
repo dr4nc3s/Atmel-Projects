@@ -18,7 +18,8 @@ void pinConfig(PortGroup *port, uns32 pin, uns8 mode) {
 			port->DIR.reg |= (1 << pin);
 			break;
 		case INPUT_PULLUP:
-			BIT_CLEAR(port->DIR.reg, pin);
+			//BIT_CLEAR(port->DIR.reg, pin);
+			port->DIR.reg &= (~(1 << pin));
 			BIT_SET(port->PINCFG[pin].reg, port->PINCFG->bit.PULLEN);
 			break;
 		default:
