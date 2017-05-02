@@ -9,8 +9,8 @@
 #define		OUTPUT			(uint8_t)0x01
 #define		INPUT_PULLUP	(uint8_t)0x02
 
-#define PORTA		(PORT->Group[0])
-#define PORTB		(PORT->Group[1])
+#define PORTA		(&PORT->Group[0])
+#define PORTB		(&PORT->Group[1])
 
 #define BIT_SET(word, pos)		((word) |= (1 << pos))
 #define BIT_CLEAR(word, pos)	((word) &= (~(1 << pos)))
@@ -29,7 +29,9 @@
 #define ENABLE_PULLUP(port, pin)		((port).PINCFG[(pin)].reg |= (1 << 2))
 #define DISABLE_PULLUP(port, pin)		((port).PINCFG[(pin)].reg &= (~(1 << 2)))
 
-void pinConfig(PortGroup port, uns32 pin, uns8 mode);
-void pinClear(PortGroup port, uns32 pin);
+void pinConfig(PortGroup *port, uns32 pin, uns8 mode);
+void pinClear(PortGroup *port, uns32 pin);
+void pinSet(PortGroup *port, uns32 pin);
+void pinToggle(PortGroup *port, uns32 pin);
 
 #endif

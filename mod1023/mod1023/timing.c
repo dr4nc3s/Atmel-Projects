@@ -56,7 +56,7 @@ void TC0_Handler() {
 	if (_micros == 1000)
 		_millis++;
 		
-	//TC0->COUNT32.INTFLAG.bit.MC0 = 1;
+	TC0->COUNT32.INTFLAG.bit.MC0 = 1;
 }
 
 

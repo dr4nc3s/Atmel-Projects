@@ -18,19 +18,19 @@ int main(void)
 {
     /* Initialize the SAM system */
     SystemInit();
-	//timer32_init(SystemCoreClock);
-	//timer32_enable();
-	MAKE_OUTPUT(PORTA, 15);
-	//pinConfig(PA15, 0x01);
+	timer32_init(SystemCoreClock);
+	timer32_enable();
+
+	pinConfig(PA15, 0x01);
 	pinClear(PA15);
-	//previous = millis();
+
     while (1) 
     {
-		//current = millis();
-		//if (current - previous >= 1000) {
-		//	pinToggle(PA15);
-		//	previous = millis();
-		//}
+		current = millis();
+		if (current - previous >= 1000) {
+			pinToggle(PA15);
+			previous = millis();
+		}
     }
 }
 
