@@ -38,3 +38,11 @@ void pinSet(PortGroup *port, uns32 pin) {
 void pinToggle(PortGroup *port, uns32 pin) {
 	port->OUTTGL.reg |= (1 << pin);
 }
+
+void pinFunction(PortGroup *port, uns32 pin, uns32 fn) {
+	port->PINCFG[pin >> 1].bit.PMUXEN = 1;
+	if (((pin >> 1) & 1) == 0)    
+		port->PMUX[pin >> 1].reg |= fn;	
+	else
+		port->PMUX[pin >> 1].reg |= (fn << 4);
+}

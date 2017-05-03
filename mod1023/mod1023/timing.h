@@ -16,7 +16,7 @@ void timer32_disable();
 void timer32_init(uint32_t clkf);
 
 //Increment _micros and _millis
-void timer32_irq();
+void TC0_Handler();
 
 uint32_t millis();
 

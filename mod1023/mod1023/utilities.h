@@ -9,8 +9,11 @@
 #define		OUTPUT			(uint8_t)0x01
 #define		INPUT_PULLUP	(uint8_t)0x02
 
+#define		IO_PERIPH_H		(uint32_t)0x07
+
 #define PORTA		(&PORT->Group[0])
 #define PORTB		(&PORT->Group[1])
+
 
 #define BIT_SET(word, pos)		((word) |= (1 << pos))
 #define BIT_CLEAR(word, pos)	((word) &= (~(1 << pos)))
@@ -33,5 +36,6 @@ void pinConfig(PortGroup *port, uns32 pin, uns8 mode);
 void pinClear(PortGroup *port, uns32 pin);
 void pinSet(PortGroup *port, uns32 pin);
 void pinToggle(PortGroup *port, uns32 pin);
+void pinFunction(PortGroup *port, uns32 pin, uns32 fn);
 
 #endif
